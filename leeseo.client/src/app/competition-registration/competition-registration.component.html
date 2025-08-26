@@ -1,0 +1,24 @@
+<div class="form-container">
+  <h2>Pendaftaran Lomba ESA</h2>
+
+  <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>Nama Siswa</label>
+      <input formControlName="studentName" type="text" placeholder="Masukkan nama siswa." />
+    </div>
+    <div class="form-group">
+      <label>Nama Sekolah</label>
+      <input formControlName="schoolName" type="text" placeholder="Masukkan nama sekolah">
+    </div>
+
+    <div class="form-group">
+      <label>Pilih Lomba</label>
+      <select formControlName="competitionId">
+        <option value="">-- Pilih Lomba --</option>
+        <option *ngFor="let c of competitions" [value]="c.id">{{ c.name }}</option>
+      </select>
+    </div>
+
+    <button type="submit">Daftar</button>
+  </form>
+</div>
