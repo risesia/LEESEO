@@ -1,0 +1,6 @@
+@LEESEO.Server_HostAddress = http://localhost:5125
+
+GET {{LEESEO.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
